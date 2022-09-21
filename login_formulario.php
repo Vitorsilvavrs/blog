@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +38,7 @@
                 <input class="form-control" type="password"
                 require="required" id="senha" name="senha">
             </div>
-
+                <?php endif; ?>
             <div class="text-right">
                 <button class="btn btn-success"
                          type="submit">Acessar</button>
