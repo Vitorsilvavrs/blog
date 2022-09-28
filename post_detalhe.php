@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <?php
-require_once '../includes/funcoes.php';
-require_once '../includes/conexao_mysql.php';
-require_once 'conexao_mysql.php';
-require_once 'sql.php';
-require_once 'mysql.php';
+require_once 'includes/funcoes.php';
+require_once 'core/conexao_mysql.php';
+require_once 'core/sql.php';
+require_once 'core/mysql.php';
 
 foreach($_GET as $indice => $dado){
     $$indice = limparDados($dado);
@@ -42,7 +41,7 @@ $data_post = date_format($data_post, 'd/m/Y H:i:s');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $post['titulo']?></title>
     <link rel="stylesheet"
-         href="lib/bootstrap-4.2.1-dtst/css/bootstrap.min.css">
+              href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
 </head>
 <body>
    <div class="container">
@@ -64,7 +63,7 @@ $data_post = date_format($data_post, 'd/m/Y H:i:s');
             <?php echo $data_post?> Por <?php echo $post['nome']?>
         </h5>
         <div class="card-text">
-            <?php echo html_entity_decode($ost['texto']) ?>
+            <?php echo html_entity_decode($post['texto']) ?>
         </div>
     </div>
 </div>

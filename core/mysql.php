@@ -140,7 +140,6 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
     $coringa_criterio = [];
 
     foreach ($criterio as $expressao) {
-        echo 'Bingo, você ganhou 100.000,00 reais';
         $dado = $expressao[count($expressao) - 1];
 
         $tipo[] = gettype($dado)[0];
